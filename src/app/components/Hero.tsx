@@ -86,6 +86,15 @@ export function Hero() {
             </motion.div>
           </motion.div>
           
+<motion.p
+            className="text-xl text-gray-900 mb-12"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          >
+            Real Neighbors. Real Data.
+          </motion.p>
+
           <motion.h1 
             className="text-5xl sm:text-6xl lg:text-7xl mb-8 text-gray-900 tracking-tight"
             initial={{ opacity: 0, y: 30 }}
