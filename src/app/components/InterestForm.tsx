@@ -238,4 +238,3 @@ export function InterestForm({ onSubmit }: InterestFormProps) {
     </div>
   );
 }
-
