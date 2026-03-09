@@ -131,21 +131,18 @@ export function InterestForm({ onSubmit }: InterestFormProps) {
               </h3>
 
               <div>
-                <label htmlFor="currentlyRenting" className="block mb-2 text-gray-700 font-medium">
-                  Are you currently renting? <span className="text-red-500">*</span>
+                <label htmlFor="communityName" className="block mb-2 text-gray-700 font-medium">
+                  What is the name of your community? <span className="text-red-500">*</span>
                 </label>
-                <select
-                  id="currentlyRenting"
-                  {...register('currentlyRenting', { required: 'Please select an option' })}
+                <input
+                  id="communityName"
+                  type="text"
+                  {...register('communityName', { required: 'Community name is required' })}
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                >
-                  <option value="">Select an option</option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                  <option value="looking">Looking for a rental</option>
-                </select>
-                {errors.currentlyRenting && (
-                  <p className="text-red-500 text-sm mt-1.5">{errors.currentlyRenting.message}</p>
+                  placeholder="Enter your apartment community name"
+                />
+                {errors.communityName && (
+                  <p className="text-red-500 text-sm mt-1.5">{errors.communityName.message}</p>
                 )}
               </div>
 
